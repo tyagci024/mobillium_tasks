@@ -15,12 +15,10 @@ class DetailActivitys : AppCompatActivity() {
         const val ARG_WEATHER_DATA = "weatherData"
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailActivitysBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         val weatherData = intent.getParcelableExtra<Weather>(ARG_WEATHER_DATA)
 
