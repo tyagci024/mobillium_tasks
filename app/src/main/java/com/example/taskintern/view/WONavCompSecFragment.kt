@@ -48,7 +48,7 @@ class WONavCompSecFragment : Fragment() {
         fun newInstance(weather: Weather): WONavCompSecFragment {
             val fragment = WONavCompSecFragment()
             val args = Bundle()
-            args.putParcelable("weather", weather)
+            args.putParcelable(WEATHER_DATA, weather)
             fragment.arguments = args
             return fragment
         }
