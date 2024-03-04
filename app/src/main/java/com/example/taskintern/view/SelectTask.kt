@@ -3,7 +3,6 @@ package com.example.taskintern.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.taskintern.R
 import com.example.taskintern.databinding.ActivitySelectTaskBinding
 
 class SelectTask : AppCompatActivity() {
@@ -15,7 +14,7 @@ class SelectTask : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.task1.setOnClickListener {
-            val intent = Intent(this, ListWeather::class.java)
+            val intent = Intent(this, ListWeatherActivity::class.java)
             startActivity(intent)
         }
         binding.task2.setOnClickListener {
@@ -27,7 +26,7 @@ class SelectTask : AppCompatActivity() {
             startActivity(intent)
         }
         binding.task4.setOnClickListener {
-            val intent = Intent(this, WONavCompActivity::class.java)
+            val intent = Intent(this, HomeUI::class.java)
             startActivity(intent)
 
         }

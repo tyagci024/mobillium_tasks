@@ -5,53 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#DFECF8"
+    android:background="@color/background"
     android:gravity="center"
-    android:padding="16dp"
+    android:padding="@dimen/dp_16"
     tools:context=".view.SelectTask">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task1"
+        android:id="@+id/task_1"
         android:layout_width="match_parent"
-        android:padding="8dp"
+        android:padding="@dimen/dp_8"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
-        android:text="Activity - Activity arasında navigasyon ve veri paslama"
-        />
+        android:text="@string/task1_text" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task2"
-        android:padding="8dp"
+        android:id="@+id/task_2"
+        android:padding="@dimen/dp_8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
-        android:text="Fragment - Fragment arasında navigasyon ve veri paslama
-"
-        />
+        android:text="@string/task2_text" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task3"
-        android:padding="8dp"
+        android:id="@+id/task_3"
+        android:padding="@dimen/dp_8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
-        android:text="Navigation Components kullanarak Fragment'lar arası navigasyon ve veri paslama
-"
-        />
+        android:text="@string/task3_text" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task4"
-        android:padding="8dp"
+        android:id="@+id/task_4"
+        android:padding="@dimen/dp_8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
-        android:text="Task 1 "
-        />
-
-
-
-
-
+        android:text="@string/task4_text" />
 
 </LinearLayout>

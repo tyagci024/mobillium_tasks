@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.taskintern.R
-import com.example.taskintern.adapter.NavCompAdapter
+import com.example.taskintern.adapter.Adapter
 import com.example.taskintern.databinding.FragmentListBinding
 import com.example.taskintern.model.Weather
 
@@ -32,7 +32,12 @@ class FragmentList : Fragment() {
 
 
         binding.recyclerViewItem.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = NavCompAdapter(requireContext(), weatherList)
+        val adapter = Adapter(requireContext(), weatherList)
+
+        adapter.onItemClickListener= {
+            findNavController()
+                .navigate(FragmentListDirections.actionFragmentListToFragmentDetail(it))
+        }
         binding.recyclerViewItem.adapter = adapter
 
         setFragmentResultListener("requestKey") { _, bundle ->

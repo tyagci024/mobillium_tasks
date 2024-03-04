@@ -11,14 +11,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E9EBEC"
+        android:background="@color/backgroungCard"
         android:padding="16dp">
 
         <ImageView
             android:id="@+id/item_icon"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_marginTop="@dimen/dp_16"
             android:src="@drawable/ic_sunny"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,9 +27,9 @@
             android:id="@+id/weatherC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="26°"
+            tools:text="@string/temperature"
             android:textColor="@color/black"
-            android:textSize="64dp"
+            android:textSize="@dimen/sp_64"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,8 +38,8 @@
             android:id="@+id/minMaxWeather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="14° - 27°"
-            android:textSize="14sp"
+            android:text="@string/temperature_range"
+            android:textSize="@dimen/sp_14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/weatherC" />
 
@@ -47,9 +47,9 @@
             android:id="@+id/cityName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Istanbul"
+            tools:text="@string/city_name"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="@dimen/sp_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/minMaxWeather" />
@@ -58,9 +58,9 @@
             android:id="@+id/weatherCondition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Güneşli"
+            tools:text="@string/weather_condition"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/sp_16"
             app:layout_constraintBottom_toBottomOf="@+id/cityName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/cityName"

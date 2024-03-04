@@ -4,95 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DFECF8"
+    android:background="@color/background"
     tools:context=".view.HomeUI">
 
-    <TextView
-        android:id="@+id/cityName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Istanbul"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bugün"
+        android:layout_marginTop="@dimen/dp_32"
         android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/cityName"
-        app:layout_constraintStart_toStartOf="@+id/cityName"
-        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/city_name" />
+
+    <TextView
+        android:id="@+id/text_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="@+id/city_name"
+        app:layout_constraintStart_toStartOf="@+id/city_name"
+        app:layout_constraintTop_toBottomOf="@+id/city_name"
+        android:text="@string/today" />
 
     <ImageView
-        android:id="@+id/weatherConditionImg"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/ic_sunny"
-        app:layout_constraintBottom_toTopOf="@+id/textViewWeather"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewWeather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="26"
-        android:textColor="@color/black"
-        android:textSize="64dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView410"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="168dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="°"
-        android:textColor="@color/black"
-        android:textSize="64dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewWeather"
-        app:layout_constraintStart_toEndOf="@+id/textViewWeather"
-        app:layout_constraintTop_toTopOf="@+id/textViewWeather"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/weatherCondition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Güneşli"
-        android:textColor="@color/black"
-        android:textSize="16sp"
+        android:id="@+id/weather_condition_img"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_marginBottom="@dimen/dp_32"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_weather"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewWeather" />
+        android:src="@drawable/ic_sunny" />
+
+    <TextView
+        android:id="@+id/text_view_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_64"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/image_view410"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view3"
+        android:text="@string/temperature" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_64"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_weather"
+        app:layout_constraintStart_toEndOf="@+id/text_view_weather"
+        app:layout_constraintTop_toTopOf="@+id/text_view_weather"
+        android:text="@string/cantigrate" />
+
+    <TextView
+        android:id="@+id/weather_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_weather"
+        android:text="Güneşli" />
 
     <TextView
         android:id="@+id/wind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Rüzgar"
+        android:layout_marginTop="@dimen/dp_32"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="@dimen/sp_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weatherCondition" />
+        app:layout_constraintTop_toBottomOf="@+id/weather_condition"
+        android:text="Rüzgar" />
 
     <LinearLayout
-        android:id="@+id/llayout"
+        android:id="@+id/l_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/dp_8"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,152 +102,151 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="14sp"
-            android:layout_height="14sp"
-            android:layout_marginRight="4dp"
+            android:id="@+id/image_view2"
+            android:layout_width="@dimen/sp_14"
+            android:layout_height="@dimen/sp_14"
+            android:layout_marginRight="@dimen/dp_4"
             android:src="@drawable/ic_wind" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/wind_speed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3 km/s"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="@dimen/sp_14"
+            android:text="3 km/s" />
 
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView710"
+        android:id="@+id/text_date_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="Sal, 02 Nisan"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView510"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/text_date_2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Sal, 02 Nisan" />
 
     <ImageView
-        android:id="@+id/imageView410"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_sunny"
-        app:layout_constraintBottom_toBottomOf="@+id/textView710"
+        android:id="@+id/image_view410"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        app:layout_constraintBottom_toBottomOf="@+id/text_date_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView710" />
+        app:layout_constraintTop_toTopOf="@+id/text_date_1"
+        android:src="@drawable/ic_sunny" />
 
     <TextView
-        android:id="@+id/textView810"
+        android:id="@+id/ttemp_range_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="14° - 27°"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/temp_range_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/temperature_range" />
 
     <TextView
-        android:id="@+id/textView510"
+        android:id="@+id/text_date_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="Çarş, 03 Nisan"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/text_date_3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/date_2" />
 
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_cloudy"
-        app:layout_constraintBottom_toBottomOf="@+id/textView510"
+        android:id="@+id/image_view5"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        app:layout_constraintBottom_toBottomOf="@+id/text_date_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView510" />
+        app:layout_constraintTop_toTopOf="@+id/text_date_2"
+        android:src="@drawable/ic_cloudy" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/temp_range_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="14° - 27°"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/temp_range_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/temperature_range" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/text_date_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="Per, 04 Nisan"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textDayCuma"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/text_date_4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/date_3" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_sunny"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        android:id="@+id/image_view4"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        app:layout_constraintBottom_toBottomOf="@+id/text_date_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+        app:layout_constraintTop_toTopOf="@+id/text_date_3"
+        android:src="@drawable/ic_sunny" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/temp_range_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="14° - 27°"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textHavaCuma"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/temp_range_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/temperature_range" />
 
     <TextView
-        android:id="@+id/textDayCuma"
+        android:id="@+id/text_date_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="32dp"
-        android:text="Cuma, 05 Nisan"
-        android:textSize="14sp"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginBottom="@dimen/dp_32"
+        android:layout_marginStart="@dimen/dp_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/date_4" />
 
     <ImageView
-        android:id="@+id/textImgCuma"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-
-        android:src="@drawable/ic_rainy"
-        app:layout_constraintBottom_toBottomOf="@+id/textDayCuma"
+        android:id="@+id/text_img_cuma"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        app:layout_constraintBottom_toBottomOf="@+id/text_date_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textDayCuma" />
+        app:layout_constraintTop_toTopOf="@+id/text_date_4"
+        android:src="@drawable/ic_rainy" />
 
     <TextView
-        android:id="@+id/textHavaCuma"
+        android:id="@+id/temp_range_4"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
-        android:text="14° - 27°"
-        android:textSize="14sp"
+        android:textSize="@dimen/sp_14"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/temperature_range" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

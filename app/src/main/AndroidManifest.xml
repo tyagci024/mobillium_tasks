@@ -28,7 +28,7 @@
             android:name=".view.HomeUI"
             android:exported="false" />
         <activity
-            android:name=".view.ListWeather"
+            android:name=".view.ListWeatherActivity"
             android:exported="false" />
         <activity
             android:name=".view.DetailActivitys"

@@ -2,14 +2,18 @@ package com.example.taskintern.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.navigation.fragment.navArgs
 import com.example.taskintern.R
 import com.example.taskintern.databinding.ActivityDetailActivitysBinding
 import com.example.taskintern.model.Weather
 
+
 class DetailActivitys : AppCompatActivity() {
     private lateinit var binding: ActivityDetailActivitysBinding
-
+    companion object {
+        const val ARG_WEATHER_DATA = "weatherData"
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,11 +22,22 @@ class DetailActivitys : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val weatherData = intent.getParcelableExtra<Weather>("weatherData")!!
+        val weatherData = intent.getParcelableExtra<Weather>(ARG_WEATHER_DATA)
 
-        binding.cityName.text = weatherData.cityName
-        binding.weatherCondition.text = weatherData.weatherCondition
-        binding.textViewWeather.text = weatherData.weather
+        if (weatherData == null) {
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+
+        if (weatherData != null) {
+            binding.cityName.text = weatherData.cityName
+        }
+        if (weatherData != null) {
+            binding.weatherCondition.text = weatherData.weatherCondition
+        }
+        if (weatherData != null) {
+            binding.textViewWeather.text = weatherData.weather
+        }
 
 
     }

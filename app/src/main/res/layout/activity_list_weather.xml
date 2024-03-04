@@ -4,40 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DFECF8"
-    tools:context=".view.ListWeather">
+    android:background="@color/background"
+    tools:context=".view.ListWeatherActivity">
 
     <TextView
-        android:id="@+id/currentDate"
+        android:id="@+id/current_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textSize="20sp"
-        android:text="01 Haziran 2024"
+        android:layout_marginTop="@dimen/dp_32"
+        android:textSize="@dimen/sp_20"
+        android:text="@string/date_4"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/text_today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bugün"
+        android:text="@string/today"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentDate" />
+        app:layout_constraintTop_toBottomOf="@+id/current_date" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewItem"
-        android:padding="16dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/recycler_view_item"
+        android:padding="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
         android:layout_width="0dp"
         android:layout_height="0dp"
         tools:listitem="@layout/item_layout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/text_today" />
 </androidx.constraintlayout.widget.ConstraintLayout>
