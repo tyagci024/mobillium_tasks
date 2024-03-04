@@ -16,6 +16,12 @@ class FragmentDetail : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
     private val args by navArgs<FragmentDetailArgs>()
+    companion object {
+        const val REQUEST_KEY = "requestKey"
+        const val UPDATED_WATER = "updatedWeather"
+        const val CITY_ID = "cityId"
+
+    }
     private var randomWeather:Int=0
 
 
@@ -42,9 +48,9 @@ class FragmentDetail : Fragment() {
 
         binding.buttonSave.setOnClickListener {
             val updatedWeather = args.currentWeather.copy(weather = "$randomWeather°C")
-            setFragmentResult("requestKey", Bundle().apply {
-                putParcelable("updatedWeather", updatedWeather)
-                putInt("cityId", args.currentWeather.id)
+            setFragmentResult(REQUEST_KEY, Bundle().apply {
+                putParcelable(UPDATED_WATER, updatedWeather)
+                putInt(CITY_ID, args.currentWeather.id)
             })//FragmentResult bundle taşıyor
 
 

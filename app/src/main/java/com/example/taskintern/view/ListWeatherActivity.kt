@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taskintern.adapter.Adapter
 import com.example.taskintern.databinding.ActivityListWeatherBinding
 import com.example.taskintern.model.Weather
+import com.example.taskintern.view.DetailActivitys.Companion.ARG_WEATHER_DATA
 
 class ListWeatherActivity : AppCompatActivity() {
     private lateinit var binding: ActivityListWeatherBinding
@@ -26,7 +27,7 @@ class ListWeatherActivity : AppCompatActivity() {
         val adapter = Adapter(this,weatherList)
         adapter.onItemClickListener = { weather ->
             val intent = Intent(this, DetailActivitys::class.java)
-            intent.putExtra("weatherData", weather)
+            intent.putExtra(ARG_WEATHER_DATA, weather)
             startActivity(intent)
         }
         binding.recyclerViewItem.adapter = adapter

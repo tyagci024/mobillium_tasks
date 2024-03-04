@@ -31,14 +31,10 @@ class DetailActivitys : AppCompatActivity() {
 
         if (weatherData != null) {
             binding.cityName.text = weatherData.cityName
-        }
-        if (weatherData != null) {
             binding.weatherCondition.text = weatherData.weatherCondition
-        }
-        if (weatherData != null) {
             binding.textViewWeather.text = weatherData.weather
-        }
 
+        }
 
     }
 

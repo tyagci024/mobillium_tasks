@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taskintern.adapter.Adapter
 import com.example.taskintern.databinding.FragmentListBinding
 import com.example.taskintern.model.Weather
+import com.example.taskintern.view.FragmentDetail.Companion.CITY_ID
+import com.example.taskintern.view.FragmentDetail.Companion.REQUEST_KEY
+import com.example.taskintern.view.FragmentDetail.Companion.UPDATED_WATER
 
 
 class FragmentList : Fragment() {
@@ -40,9 +43,9 @@ class FragmentList : Fragment() {
         }
         binding.recyclerViewItem.adapter = adapter
 
-        setFragmentResultListener("requestKey") { _, bundle ->
-            val updatedWeather = bundle.getParcelable<Weather>("updatedWeather")
-            val cityId = bundle.getInt("cityId")
+        setFragmentResultListener(REQUEST_KEY) { _, bundle ->
+            val updatedWeather = bundle.getParcelable<Weather>(UPDATED_WATER)
+            val cityId = bundle.getInt(CITY_ID)
             updatedWeather?.let {
                 val index = weatherList.indexOfFirst { weather -> weather.id == cityId }
                 if (index != -1) {
