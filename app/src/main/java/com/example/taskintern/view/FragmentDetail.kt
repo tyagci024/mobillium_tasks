@@ -16,30 +16,23 @@ class FragmentDetail : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
     private val args by navArgs<FragmentDetailArgs>()
+
     companion object {
         const val REQUEST_KEY = "requestKey"
-        const val UPDATED_WATER = "updatedWeather"
+        const val UPDATED_WEATHER = "updatedWeather"
         const val CITY_ID = "cityId"
-
     }
-    private var randomWeather:Int=0
 
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private var randomWeather: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDetailBinding.inflate(inflater,container,false)
-        binding.cityName.setText(args.currentWeather.cityName)
-        binding.textViewWeather.setText(args.currentWeather.weather)
-        binding.weatherCondition.setText(args.currentWeather.weatherCondition)
+        binding = FragmentDetailBinding.inflate(inflater, container, false)
+        binding.cityName.text = args.currentWeather.cityName
+        binding.textViewWeather.text = args.currentWeather.weather
+        binding.weatherCondition.text = args.currentWeather.weatherCondition
 
         binding.imgRefresh.setOnClickListener {
             randomWeather = (args.currentWeather.minWeather..args.currentWeather.maxWeather).random()
@@ -49,16 +42,11 @@ class FragmentDetail : Fragment() {
         binding.buttonSave.setOnClickListener {
             val updatedWeather = args.currentWeather.copy(weather = "$randomWeather°C")
             setFragmentResult(REQUEST_KEY, Bundle().apply {
-                putParcelable(UPDATED_WATER, updatedWeather)
+                putParcelable(UPDATED_WEATHER, updatedWeather)
                 putInt(CITY_ID, args.currentWeather.id)
-            })//FragmentResult bundle taşıyor
-
-
-
+            }) // FragmentResult bundle taşıyor
         }
-
 
         return binding.root
     }
-
 }

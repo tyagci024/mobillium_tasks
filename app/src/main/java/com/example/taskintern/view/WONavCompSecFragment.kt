@@ -12,31 +12,22 @@ import com.example.taskintern.model.Weather
 
 
 class WONavCompSecFragment : Fragment() {
-    private lateinit var binding:FragmentWONavCompSecBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var binding: FragmentWONavCompSecBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding =FragmentWONavCompSecBinding.inflate(inflater, container,false)
+    ): View {
+        binding = FragmentWONavCompSecBinding.inflate(inflater, container, false)
 
         val weather: Weather? = arguments?.getParcelable(WEATHER_DATA)
-
-        if (weather == null) {
-            Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
-        }
-
 
         if (weather != null) {
             binding.cityName.text = weather.cityName
             binding.textViewWeather.text = weather.weather
             binding.weatherCondition.text = weather.weatherCondition
-
+        } else {
+            Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
         }
 
         return binding.root
@@ -47,11 +38,11 @@ class WONavCompSecFragment : Fragment() {
 
         fun newInstance(weather: Weather): WONavCompSecFragment {
             val fragment = WONavCompSecFragment()
-            val args = Bundle()
-            args.putParcelable(WEATHER_DATA, weather)
+            val args = Bundle().apply {
+                putParcelable(WEATHER_DATA, weather)
+            }
             fragment.arguments = args
             return fragment
         }
     }
-
 }

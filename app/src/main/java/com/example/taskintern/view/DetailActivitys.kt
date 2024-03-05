@@ -11,6 +11,7 @@ import com.example.taskintern.model.Weather
 
 class DetailActivitys : AppCompatActivity() {
     private lateinit var binding: ActivityDetailActivitysBinding
+
     companion object {
         const val ARG_WEATHER_DATA = "weatherData"
     }
@@ -22,20 +23,13 @@ class DetailActivitys : AppCompatActivity() {
 
         val weatherData = intent.getParcelableExtra<Weather>(ARG_WEATHER_DATA)
 
-        if (weatherData == null) {
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
-            finish()
-        }
-
         if (weatherData != null) {
             binding.cityName.text = weatherData.cityName
             binding.weatherCondition.text = weatherData.weatherCondition
             binding.textViewWeather.text = weatherData.weather
-
+        } else {
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+            finish()
         }
-
     }
-
-
-
 }
