@@ -26,7 +26,6 @@
     <string name="date_3">Per, 04 Nisan</string>
     <string name="date_4">Cuma, 05 Nisan</string>
 
-    <!-- Sıcaklık aralıkları -->
     <string name="temperature_range">14° - 27°</string>
     <string name="temperature">26</string>
     <string name="cantigrate">°</string>

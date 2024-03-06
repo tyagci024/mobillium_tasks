@@ -34,6 +34,7 @@ class ListWeatherActivity : AppCompatActivity() {
         }
         binding.recyclerViewItem.adapter = adapter
     }
+
 }
 
 

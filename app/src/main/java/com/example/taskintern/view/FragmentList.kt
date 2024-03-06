@@ -19,12 +19,11 @@ import com.example.taskintern.view.FragmentDetail.Companion.UPDATED_WEATHER
 class FragmentList : Fragment() {
     private lateinit var weatherList: MutableList<Weather>
     private lateinit var binding: FragmentListBinding
-    private var updatedTemperature: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentListBinding.inflate(inflater, container, false)
         weatherList = mutableListOf(
             Weather(0, "Ankara", "25°C", 10, 28, "Rüzgarlı"),
@@ -35,7 +34,7 @@ class FragmentList : Fragment() {
         val adapter = Adapter(requireContext(), weatherList)
 
         adapter.onItemClickListener = { weather ->
-            findNavController().navigate(FragmentListDirections.actionFragmentListToFragmentDetail(weather))
+            findNavController().navigate(FragmentListDirections.toDetail(weather))
         }
         binding.recyclerViewItem.adapter = adapter
 

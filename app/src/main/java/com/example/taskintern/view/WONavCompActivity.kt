@@ -3,7 +3,6 @@ package com.example.taskintern.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.taskintern.R
-import com.example.taskintern.databinding.ActivityDetailActivitysBinding
 import com.example.taskintern.databinding.ActivityWonavCompBinding
 
 class WONavCompActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class WONavCompActivity : AppCompatActivity() {
         binding = ActivityWonavCompBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val firstFragment = WONavCompFirsFragment()
+        val firstFragment = WONavCompFirstFragment()
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, firstFragment)
             .commit()

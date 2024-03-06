@@ -12,14 +12,14 @@ import com.example.taskintern.databinding.FragmentWONavCompFirsBinding
 import com.example.taskintern.model.Weather
 
 
-class WONavCompFirsFragment : Fragment() {
+class WONavCompFirstFragment : Fragment() {
     private lateinit var binding: FragmentWONavCompFirsBinding
     private lateinit var adapter: Adapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentWONavCompFirsBinding.inflate(inflater, container, false)
 
         val weatherList = listOf(

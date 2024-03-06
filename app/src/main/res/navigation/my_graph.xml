@@ -11,7 +11,7 @@
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
-            android:id="@+id/action_fragmentList_to_fragmentDetail"
+            android:id="@+id/toDetail"
             app:destination="@id/fragmentDetail" />
     </fragment>
     <fragment
@@ -20,7 +20,7 @@
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <action
-            android:id="@+id/action_fragmentDetail_to_fragmentList"
+            android:id="@+id/toList"
             app:destination="@id/fragmentList" />
         <argument
             android:name="currentWeather"

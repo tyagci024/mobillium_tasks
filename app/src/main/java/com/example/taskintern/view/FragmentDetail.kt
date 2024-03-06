@@ -28,7 +28,7 @@ class FragmentDetail : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDetailBinding.inflate(inflater, container, false)
         binding.cityName.text = args.currentWeather.cityName
         binding.textViewWeather.text = args.currentWeather.weather
@@ -49,4 +49,5 @@ class FragmentDetail : Fragment() {
 
         return binding.root
     }
+
 }

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.taskintern.databinding.ActivitySelectTaskBinding
 
-class SelectTask : AppCompatActivity() {
+class SelectTaskActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySelectTaskBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +28,7 @@ class SelectTask : AppCompatActivity() {
         binding.task4.setOnClickListener {
             val intent = Intent(this, HomeUI::class.java)
             startActivity(intent)
-
         }
-
     }
+
 }

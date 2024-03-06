@@ -15,7 +15,6 @@ class DetailActivitys : AppCompatActivity() {
     companion object {
         const val ARG_WEATHER_DATA = "weatherData"
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailActivitysBinding.inflate(layoutInflater)
@@ -32,4 +31,5 @@ class DetailActivitys : AppCompatActivity() {
             finish()
         }
     }
+
 }
