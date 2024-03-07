@@ -88,35 +88,20 @@
         app:layout_constraintTop_toBottomOf="@+id/weather_condition"
         tools:text="@string/wind" />
 
-    <LinearLayout
-        android:id="@+id/l_layout"
+
+    <TextView
+        android:id="@+id/wind_speed"
+        android:layout_marginTop="@dimen/dp_8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_8"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:text="@string/wind_speed"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        app:drawableStartCompat="@drawable/ic_wind"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wind">
-
-
-        <ImageView
-            android:id="@+id/image_view2"
-            android:layout_width="@dimen/sp_14"
-            android:layout_height="@dimen/sp_14"
-            android:layout_marginRight="@dimen/dp_4"
-            android:src="@drawable/ic_wind" />
-
-        <TextView
-            android:id="@+id/wind_speed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_14"
-            android:text="@string/wind_speed" />
-
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/wind" />
 
     <TextView
         android:id="@+id/text_date_1"

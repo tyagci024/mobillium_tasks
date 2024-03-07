@@ -13,22 +13,26 @@ class SelectTaskActivity : AppCompatActivity() {
         binding = ActivitySelectTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupButtonClickListeners()
+    }
+
+    private fun setupButtonClickListeners() {
         binding.task1.setOnClickListener {
-            val intent = Intent(this, ListWeatherActivity::class.java)
-            startActivity(intent)
+            startNewActivity(ListWeatherActivity::class.java)
         }
         binding.task2.setOnClickListener {
-            val intent = Intent(this, WONavCompActivity::class.java)
-            startActivity(intent)
+            startNewActivity(WONavCompActivity::class.java)
         }
         binding.task3.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startNewActivity(MainActivity::class.java)
         }
         binding.task4.setOnClickListener {
-            val intent = Intent(this, HomeUI::class.java)
-            startActivity(intent)
+            startNewActivity(HomeUI::class.java)
         }
     }
 
+    private fun startNewActivity(activityClass: Class<*>) {
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
+    }
 }

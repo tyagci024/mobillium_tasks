@@ -13,7 +13,6 @@ import com.example.taskintern.model.Weather
 
 class WONavCompSecFragment : Fragment() {
     private lateinit var binding: FragmentWONavCompSecBinding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

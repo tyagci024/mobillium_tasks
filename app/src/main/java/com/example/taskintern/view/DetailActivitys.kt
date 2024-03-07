@@ -12,9 +12,6 @@ import com.example.taskintern.model.Weather
 class DetailActivitys : AppCompatActivity() {
     private lateinit var binding: ActivityDetailActivitysBinding
 
-    companion object {
-        const val ARG_WEATHER_DATA = "weatherData"
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailActivitysBinding.inflate(layoutInflater)
@@ -22,14 +19,18 @@ class DetailActivitys : AppCompatActivity() {
 
         val weatherData = intent.getParcelableExtra<Weather>(ARG_WEATHER_DATA)
 
-        if (weatherData != null) {
-            binding.cityName.text = weatherData.cityName
-            binding.weatherCondition.text = weatherData.weatherCondition
-            binding.textViewWeather.text = weatherData.weather
-        } else {
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
-            finish()
+        weatherData?.let { data ->
+            binding.apply {
+                cityName.text = data.cityName
+                weatherCondition.text = data.weatherCondition
+                textViewWeather.text = data.weather
+            }
+        } ?:run{
+            Toast.makeText(this, "Hata!!", Toast.LENGTH_SHORT).show()
         }
-    }
 
+    }
+    companion object {
+        const val ARG_WEATHER_DATA = "weatherData"
+    }
 }
