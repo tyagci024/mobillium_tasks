@@ -9,4 +9,5 @@ class HomeUI : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_ui)
     }
+
 }

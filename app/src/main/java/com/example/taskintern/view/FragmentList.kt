@@ -51,5 +51,6 @@ class FragmentList : Fragment() {
         }
         return binding.root
     }
+
 }
 

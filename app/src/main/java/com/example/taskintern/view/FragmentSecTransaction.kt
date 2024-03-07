@@ -10,7 +10,7 @@ import com.example.taskintern.databinding.FragmentWONavCompSecBinding
 import com.example.taskintern.model.Weather
 
 
-class WONavCompSecFragment : Fragment() {
+class FragmentSecTransaction : Fragment() {
     private lateinit var binding: FragmentWONavCompSecBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +26,7 @@ class WONavCompSecFragment : Fragment() {
                 weatherCondition.text = data.weatherCondition
                 textViewWeather.text = data.weather
             }
-        } ?:run{
+        } ?: run {
             Toast.makeText(requireContext(), "Hata!!", Toast.LENGTH_SHORT).show()
         }
 
@@ -36,8 +36,8 @@ class WONavCompSecFragment : Fragment() {
     companion object {
         const val WEATHER_DATA = "weather"
 
-        fun newInstance(weather: Weather): WONavCompSecFragment {
-            val fragment = WONavCompSecFragment()
+        fun newInstance(weather: Weather): FragmentSecTransaction {
+            val fragment = FragmentSecTransaction()
             val args = Bundle().apply {
                 putParcelable(WEATHER_DATA, weather)
             }
@@ -45,4 +45,5 @@ class WONavCompSecFragment : Fragment() {
             return fragment
         }
     }
+
 }

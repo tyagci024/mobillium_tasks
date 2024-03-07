@@ -4,46 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="@dimen/dp_16"
     tools:context=".view.SelectTaskActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/task_1"
         android:layout_width="match_parent"
-        android:padding="@dimen/dp_8"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
+        android:padding="@dimen/dp_8"
         android:text="@string/task1_text" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/task_2"
-        android:padding="@dimen/dp_8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
+        android:padding="@dimen/dp_8"
         android:text="@string/task2_text" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/task_3"
-        android:padding="@dimen/dp_8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
+        android:padding="@dimen/dp_8"
         android:text="@string/task3_text" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/task_4"
-        android:padding="@dimen/dp_8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"
         android:background="@drawable/button_bg"
+        android:padding="@dimen/dp_8"
         android:text="@string/task4_text" />
 
 </LinearLayout>

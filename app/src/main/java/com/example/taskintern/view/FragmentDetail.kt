@@ -29,10 +29,10 @@ class FragmentDetail : Fragment() {
 
             imgRefresh.setOnClickListener {
                 randomWeather = (currentWeather.minWeather..currentWeather.maxWeather).random()
-                binding.textViewWeather.text = "$randomWeather°C"
+                binding.textViewWeather.text = String.format("%d°C", randomWeather)
             }
             buttonSave.setOnClickListener {
-                val updatedWeather = args.currentWeather.copy(weather = "$randomWeather°C")
+                val updatedWeather = args.currentWeather.copy(weather = String.format("%d°C", randomWeather))
                 setFragmentResult(REQUEST_KEY, Bundle().apply {
                     putParcelable(UPDATED_WEATHER, updatedWeather)
                     putInt(CITY_ID, args.currentWeather.id)

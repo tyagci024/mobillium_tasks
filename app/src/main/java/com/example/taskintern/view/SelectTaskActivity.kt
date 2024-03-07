@@ -21,7 +21,7 @@ class SelectTaskActivity : AppCompatActivity() {
             startNewActivity(ListWeatherActivity::class.java)
         }
         binding.task2.setOnClickListener {
-            startNewActivity(WONavCompActivity::class.java)
+            startNewActivity(ActivityForTransactionFragments::class.java)
         }
         binding.task3.setOnClickListener {
             startNewActivity(MainActivity::class.java)
@@ -35,4 +35,5 @@ class SelectTaskActivity : AppCompatActivity() {
         val intent = Intent(this, activityClass)
         startActivity(intent)
     }
+
 }

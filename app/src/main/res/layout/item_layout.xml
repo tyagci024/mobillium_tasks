@@ -27,12 +27,12 @@
             android:id="@+id/weatherC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/temperature"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_64"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/temperature" />
 
         <TextView
             android:id="@+id/minMaxWeather"
@@ -47,25 +47,24 @@
             android:id="@+id/cityName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/city_name"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/minMaxWeather" />
+            app:layout_constraintTop_toBottomOf="@+id/minMaxWeather"
+            tools:text="@string/city_name" />
 
         <TextView
             android:id="@+id/weatherCondition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/weather_condition"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_16"
             app:layout_constraintBottom_toBottomOf="@+id/cityName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/cityName"
-            app:layout_constraintVertical_bias="1.0" />
-
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="@string/weather_condition" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

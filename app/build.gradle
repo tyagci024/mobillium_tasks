@@ -37,6 +37,17 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    ktlint{
+        android = true
+        ignoreFailures = false
+        disabledRules = ["final-newline","no-wildcard-imports"]
+        reporters {
+            reporter "plain"
+            reporter "checkstyle"
+            reporter "sarif"
+        }
+
+    }
 }
 
 

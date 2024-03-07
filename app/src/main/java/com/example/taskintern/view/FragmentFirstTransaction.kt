@@ -12,7 +12,7 @@ import com.example.taskintern.databinding.FragmentWONavCompFirsBinding
 import com.example.taskintern.model.Weather
 
 
-class WONavCompFirstFragment : Fragment() {
+class FragmentFirstTransaction : Fragment() {
     private lateinit var binding: FragmentWONavCompFirsBinding
     private lateinit var adapter: Adapter
 
@@ -33,7 +33,7 @@ class WONavCompFirstFragment : Fragment() {
             val fragmentTransaction = parentFragmentManager.beginTransaction()
             fragmentTransaction.replace(
                 R.id.fragment_container,
-                WONavCompSecFragment.newInstance(weather)
+                FragmentSecTransaction.newInstance(weather)//geçişler
             )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
@@ -44,4 +44,5 @@ class WONavCompFirstFragment : Fragment() {
 
         return binding.root
     }
+
 }

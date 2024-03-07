@@ -31,4 +31,5 @@ class DetailActivitys : AppCompatActivity() {
     companion object {
         const val ARG_WEATHER_DATA = "weatherData"
     }
+
 }

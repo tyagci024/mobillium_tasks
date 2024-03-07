@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.WONavCompActivity">
+    tools:context=".view.ActivityForTransactionFragments">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
-        android:name="com.example.taskintern.view.WONavCompFirstFragment"
+        android:name="com.example.taskintern.view.FragmentFirstTransaction"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

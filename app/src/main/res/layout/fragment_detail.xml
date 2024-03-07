@@ -22,12 +22,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
-        tools:text="@string/city_name"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_refresh" />
+        app:layout_constraintTop_toBottomOf="@+id/img_refresh"
+        tools:text="@string/city_name" />
 
     <TextView
         android:id="@+id/text_view3"
@@ -54,37 +54,37 @@
         android:id="@+id/text_view_weather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/temperature"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_64"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/image_view410"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view3" />
+        app:layout_constraintTop_toBottomOf="@+id/text_view3"
+        tools:text="@string/temperature" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/cantigrate"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_64"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/text_view_weather"
         app:layout_constraintStart_toEndOf="@+id/text_view_weather"
-        app:layout_constraintTop_toTopOf="@+id/text_view_weather" />
+        app:layout_constraintTop_toTopOf="@+id/text_view_weather"
+        tools:text="@string/cantigrate" />
 
     <TextView
         android:id="@+id/weather_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
-        tools:text="@string/weather_condition"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_weather" />
+        app:layout_constraintTop_toBottomOf="@+id/text_view_weather"
+        tools:text="@string/weather_condition" />
 
     <TextView
         android:id="@+id/wind"
@@ -169,7 +169,6 @@
         android:textSize="@dimen/sp_14"
         app:layout_constraintBottom_toTopOf="@+id/text_date_3"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <ImageView
         android:id="@+id/image_view5"
