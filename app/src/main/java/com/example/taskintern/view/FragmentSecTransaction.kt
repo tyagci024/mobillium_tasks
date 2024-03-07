@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.taskintern.databinding.FragmentWONavCompSecBinding
 import com.example.taskintern.model.Weather
+import com.example.taskintern.extension.parcelable
+
 
 
 class FragmentSecTransaction : Fragment() {
@@ -18,7 +20,7 @@ class FragmentSecTransaction : Fragment() {
     ): View {
         binding = FragmentWONavCompSecBinding.inflate(inflater, container, false)
 
-        val weather: Weather? = arguments?.getParcelable(WEATHER_DATA)
+        val weather: Weather? = arguments?.parcelable(WEATHER_DATA)
 
         weather?.let { data ->
             binding.apply {

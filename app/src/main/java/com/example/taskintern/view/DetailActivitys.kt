@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.taskintern.databinding.ActivityDetailActivitysBinding
 import com.example.taskintern.model.Weather
-
+import com.example.taskintern.extension.parcelable
 
 class DetailActivitys : AppCompatActivity() {
     private lateinit var binding: ActivityDetailActivitysBinding
@@ -15,7 +15,7 @@ class DetailActivitys : AppCompatActivity() {
         binding = ActivityDetailActivitysBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val weatherData = intent.getParcelableExtra<Weather>(ARG_WEATHER_DATA)
+        val weatherData = intent.parcelable<Weather>(ARG_WEATHER_DATA)
 
         weatherData?.let { data ->
             binding.apply {
