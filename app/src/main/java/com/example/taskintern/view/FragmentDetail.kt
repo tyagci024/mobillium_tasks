@@ -6,17 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-
-import com.example.taskintern.R
 import com.example.taskintern.databinding.FragmentDetailBinding
 
 class FragmentDetail : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
     private val args by navArgs<FragmentDetailArgs>()
-    val currentWeather=args.currentWeather
+    val currentWeather = args.currentWeather
     private var randomWeather: Int = 0
 
     override fun onCreateView(
@@ -49,6 +46,7 @@ class FragmentDetail : Fragment() {
 
         return binding.root
     }
+
     companion object {
         const val REQUEST_KEY = "requestKey"
         const val UPDATED_WEATHER = "updatedWeather"

@@ -3,8 +3,6 @@ package com.example.taskintern.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.navigation.fragment.navArgs
-import com.example.taskintern.R
 import com.example.taskintern.databinding.ActivityDetailActivitysBinding
 import com.example.taskintern.model.Weather
 

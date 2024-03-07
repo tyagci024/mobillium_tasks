@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.taskintern.R
 import com.example.taskintern.databinding.FragmentWONavCompSecBinding
 import com.example.taskintern.model.Weather
 
@@ -21,12 +20,14 @@ class WONavCompSecFragment : Fragment() {
 
         val weather: Weather? = arguments?.getParcelable(WEATHER_DATA)
 
-        if (weather != null) {
-            binding.cityName.text = weather.cityName
-            binding.textViewWeather.text = weather.weather
-            binding.weatherCondition.text = weather.weatherCondition
-        } else {
-            Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+        weather?.let { data ->
+            binding.apply {
+                cityName.text = data.cityName
+                weatherCondition.text = data.weatherCondition
+                textViewWeather.text = data.weather
+            }
+        } ?:run{
+            Toast.makeText(requireContext(), "Hata!!", Toast.LENGTH_SHORT).show()
         }
 
         return binding.root

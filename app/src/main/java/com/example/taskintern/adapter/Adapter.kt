@@ -19,14 +19,15 @@ class Adapter(val context: Context, val weatherList: List<Weather>) :
     override fun onBindViewHolder(holder: WeatherListViewHolder, position: Int) {
         val weather = weatherList[position]
         holder.bind(weather)
-            holder.itemView.setOnClickListener {
-                onItemClickListener?.invoke(weather)
-            }
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.invoke(weather)
+        }
     }
 
     override fun getItemCount() = weatherList.size
 
-    class WeatherListViewHolder(private val binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+    class WeatherListViewHolder(private val binding: ItemLayoutBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(weather: Weather) {
             binding.apply {
                 cityName.text = weather.cityName
