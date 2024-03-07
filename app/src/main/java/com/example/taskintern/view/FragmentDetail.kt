@@ -22,6 +22,7 @@ class FragmentDetail : Fragment() {
     ): View {
         binding = FragmentDetailBinding.inflate(inflater, container, false)
 
+
         binding.apply {
             cityName.text = currentWeather.cityName
             weatherCondition.text = currentWeather.weatherCondition
