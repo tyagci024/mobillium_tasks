@@ -15,7 +15,7 @@
         android:padding="@dimen/dp_16">
 
         <ImageView
-            android:id="@+id/item_icon"
+            android:id="@+id/image_view_weather_icon"
             android:layout_width="@dimen/dp_64"
             android:layout_height="@dimen/dp_64"
             android:layout_marginTop="@dimen/dp_16"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/weatherC"
+            android:id="@+id/text_view_weather_cantigrate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -35,36 +35,37 @@
             tools:text="@string/temperature" />
 
         <TextView
-            android:id="@+id/minMaxWeather"
+            android:id="@+id/text_view_min_max_weather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/temperature_range"
             android:textSize="@dimen/sp_14"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherC" />
+            app:layout_constraintTop_toBottomOf="@+id/text_view_weather_cantigrate" />
 
         <TextView
-            android:id="@+id/cityName"
+            android:id="@+id/text_view_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/minMaxWeather"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_min_max_weather"
             tools:text="@string/city_name" />
 
         <TextView
-            android:id="@+id/weatherCondition"
+            android:id="@+id/text_view_weather_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_16"
-            app:layout_constraintBottom_toBottomOf="@+id/cityName"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_city"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cityName"
+            app:layout_constraintTop_toTopOf="@+id/text_view_city"
             app:layout_constraintVertical_bias="1.0"
             tools:text="@string/weather_condition" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

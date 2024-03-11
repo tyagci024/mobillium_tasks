@@ -17,17 +17,19 @@ class SelectTaskActivity : AppCompatActivity() {
     }
 
     private fun setupButtonClickListeners() {
-        binding.task1.setOnClickListener {
-            startNewActivity(ListWeatherActivity::class.java)
-        }
-        binding.task2.setOnClickListener {
-            startNewActivity(ActivityForTransactionFragments::class.java)
-        }
-        binding.task3.setOnClickListener {
-            startNewActivity(MainActivity::class.java)
-        }
-        binding.task4.setOnClickListener {
-            startNewActivity(HomeUI::class.java)
+        binding.apply {
+            buttonTask1.setOnClickListener {
+                startNewActivity(ListWeatherActivity::class.java)
+            }
+            buttonTask2.setOnClickListener {
+                startNewActivity(TransactionFragmentActivity::class.java)
+            }
+            buttonTask3.setOnClickListener {
+                startNewActivity(MainActivity::class.java)
+            }
+            buttonTask4.setOnClickListener {
+                startNewActivity(HomeUIActivity::class.java)
+            }
         }
     }
 
@@ -35,5 +37,4 @@ class SelectTaskActivity : AppCompatActivity() {
         val intent = Intent(this, activityClass)
         startActivity(intent)
     }
-
 }

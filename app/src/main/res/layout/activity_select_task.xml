@@ -11,7 +11,7 @@
     tools:context=".view.SelectTaskActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task_1"
+        android:id="@+id/button_task1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"
@@ -20,7 +20,7 @@
         android:text="@string/task1_text" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task_2"
+        android:id="@+id/button_task2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"
@@ -29,7 +29,7 @@
         android:text="@string/task2_text" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task_3"
+        android:id="@+id/button_task3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"
@@ -38,7 +38,7 @@
         android:text="@string/task3_text" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/task_4"
+        android:id="@+id/button_task4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_16"

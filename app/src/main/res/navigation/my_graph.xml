@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentList"
-        android:name="com.example.taskintern.view.FragmentList"
+        android:name="com.example.taskintern.view.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentDetail"
-        android:name="com.example.taskintern.view.FragmentDetail"
+        android:name="com.example.taskintern.view.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <action

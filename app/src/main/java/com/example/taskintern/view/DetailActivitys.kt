@@ -8,6 +8,7 @@ import com.example.taskintern.model.Weather
 import com.example.taskintern.extension.parcelable
 
 class DetailActivitys : AppCompatActivity() {
+
     private lateinit var binding: ActivityDetailActivitysBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +20,8 @@ class DetailActivitys : AppCompatActivity() {
 
         weatherData?.let { data ->
             binding.apply {
-                cityName.text = data.cityName
-                weatherCondition.text = data.weatherCondition
+                textViewCityName.text = data.cityName
+                textViewWeatherCondition.text = data.weatherCondition
                 textViewWeather.text = data.weather
             }
         } ?:run{
@@ -31,5 +32,5 @@ class DetailActivitys : AppCompatActivity() {
     companion object {
         const val ARG_WEATHER_DATA = "weatherData"
     }
-
 }
+

@@ -9,6 +9,7 @@ import com.example.taskintern.model.Weather
 
 class Adapter(val context: Context, val weatherList: List<Weather>) :
     RecyclerView.Adapter<Adapter.WeatherListViewHolder>() {
+
     var onItemClickListener: ((Weather) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherListViewHolder {
@@ -28,11 +29,12 @@ class Adapter(val context: Context, val weatherList: List<Weather>) :
 
     class WeatherListViewHolder(private val binding: ItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(weather: Weather) {
             binding.apply {
-                cityName.text = weather.cityName
-                weatherC.text = weather.weather
-                weatherCondition.text = weather.weatherCondition
+                textViewCity.text = weather.cityName
+                textViewWeatherCantigrate.text = weather.weather
+                textViewWeatherCondition.text = weather.weatherCondition
             }
         }
     }

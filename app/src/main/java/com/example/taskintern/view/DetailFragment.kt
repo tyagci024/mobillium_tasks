@@ -9,7 +9,7 @@ import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.navArgs
 import com.example.taskintern.databinding.FragmentDetailBinding
 
-class FragmentDetail : Fragment() {
+class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
     private val args by navArgs<FragmentDetailArgs>()
@@ -20,12 +20,12 @@ class FragmentDetail : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentDetailBinding.inflate(inflater, container, false)
 
-
         binding.apply {
-            cityName.text = currentWeather.cityName
-            weatherCondition.text = currentWeather.weatherCondition
+            textViewCityName.text = currentWeather.cityName
+            textViewWeatherCondition.text = currentWeather.weatherCondition
             textViewWeather.text = currentWeather.weather
 
             imgRefresh.setOnClickListener {
@@ -39,12 +39,7 @@ class FragmentDetail : Fragment() {
                     putInt(CITY_ID, args.currentWeather.id)
                 }) // FragmentResult bundle taşıyor
             }
-
-
         }
-
-
-
         return binding.root
     }
 
@@ -53,5 +48,4 @@ class FragmentDetail : Fragment() {
         const val UPDATED_WEATHER = "updatedWeather"
         const val CITY_ID = "cityId"
     }
-
 }

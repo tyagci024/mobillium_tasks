@@ -5,33 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".view.FragmentSecTransaction">
+    tools:context=".view.SecTransactionFragment">
 
     <TextView
-        android:id="@+id/city_name"
+        android:id="@+id/text_view_city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_32"
-        android:text="@string/city_name"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/city_name" />
 
     <TextView
-        android:id="@+id/text_view3"
+        android:id="@+id/text_view_today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/today"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintEnd_toEndOf="@+id/city_name"
-        app:layout_constraintStart_toStartOf="@+id/city_name"
-        app:layout_constraintTop_toBottomOf="@+id/city_name" />
+        app:layout_constraintEnd_toEndOf="@+id/text_view_city_name"
+        app:layout_constraintStart_toStartOf="@+id/text_view_city_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_city_name" />
 
     <ImageView
-        android:id="@+id/weather_condition_img"
+        android:id="@+id/image_view_weather_today"
         android:layout_width="@dimen/dp_64"
         android:layout_height="@dimen/dp_64"
         android:layout_marginBottom="@dimen/dp_32"
@@ -47,10 +47,10 @@
         android:textColor="@color/black"
         android:textSize="@dimen/sp_64"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/image_view410"
+        app:layout_constraintBottom_toTopOf="@+id/image_view_sunny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view3"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_today"
         tools:text="@string/temperature" />
 
     <TextView
@@ -65,7 +65,7 @@
         tools:text="@string/cantigrate" />
 
     <TextView
-        android:id="@+id/weather_condition"
+        android:id="@+id/text_view_weather_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
@@ -77,146 +77,129 @@
         tools:text="@string/weather_condition" />
 
     <TextView
-        android:id="@+id/wind"
+        android:id="@+id/text_view_wind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_32"
-        android:text="@string/wind"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weather_condition" />
+        app:layout_constraintTop_toBottomOf="@+id/text_view_weather_condition"
+        tools:text="@string/wind" />
 
-    <LinearLayout
-        android:id="@+id/l_layout"
+    <TextView
+        android:id="@+id/text_view_wind_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_8"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:text="@string/wind_speed"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        app:drawableStartCompat="@drawable/ic_wind"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wind">
-
-
-        <ImageView
-            android:id="@+id/image_view2"
-            android:layout_width="@dimen/sp_14"
-            android:layout_height="@dimen/sp_14"
-            android:layout_marginRight="@dimen/dp_4"
-            android:src="@drawable/ic_wind" />
-
-        <TextView
-            android:id="@+id/wind_speed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/wind_speed"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_14" />
-
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/text_view_wind" />
 
     <TextView
-        android:id="@+id/text_date_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/text_view_tue"
         android:layout_marginStart="@dimen/dp_24"
         android:layout_marginBottom="@dimen/dp_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/date_1"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toTopOf="@+id/text_date_2"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_wed"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/image_view410"
+        android:id="@+id/image_view_sunny"
         android:layout_width="@dimen/dp_24"
         android:layout_height="@dimen/dp_24"
         android:src="@drawable/ic_sunny"
-        app:layout_constraintBottom_toBottomOf="@+id/text_date_1"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_tue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_date_1" />
+        app:layout_constraintTop_toTopOf="@+id/text_view_tue" />
 
     <TextView
-        android:id="@+id/ttemp_range_1"
+        android:id="@+id/text_view_temp_range"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dp_24"
         android:layout_marginBottom="@dimen/dp_8"
         android:text="@string/temperature_range"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toTopOf="@+id/temp_range_2"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_temp_range_wed"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/text_date_2"
+        android:id="@+id/text_view_wed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_24"
         android:layout_marginBottom="@dimen/dp_8"
         android:text="@string/date_2"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toTopOf="@+id/text_date_3"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_thu"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <ImageView
-        android:id="@+id/image_view5"
+        android:id="@+id/image_view_cloud"
         android:layout_width="@dimen/dp_24"
         android:layout_height="@dimen/dp_24"
         android:src="@drawable/ic_cloudy"
-        app:layout_constraintBottom_toBottomOf="@+id/text_date_2"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_wed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_date_2" />
+        app:layout_constraintTop_toTopOf="@+id/text_view_wed" />
 
     <TextView
-        android:id="@+id/temp_range_2"
+        android:id="@+id/text_view_temp_range_wed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dp_24"
         android:layout_marginBottom="@dimen/dp_8"
         android:text="@string/temperature_range"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toTopOf="@+id/temp_range_3"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_temp_range_thu"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/text_date_3"
+        android:id="@+id/text_view_thu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_24"
         android:layout_marginBottom="@dimen/dp_8"
         android:text="@string/date_3"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toTopOf="@+id/text_date_4"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_friday"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/image_view4"
+        android:id="@+id/image_view_thu_sunny"
         android:layout_width="@dimen/dp_24"
         android:layout_height="@dimen/dp_24"
         android:src="@drawable/ic_sunny"
-        app:layout_constraintBottom_toBottomOf="@+id/text_date_3"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_thu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_date_3" />
+        app:layout_constraintTop_toTopOf="@+id/text_view_thu" />
 
     <TextView
-        android:id="@+id/temp_range_3"
+        android:id="@+id/text_view_temp_range_thu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dp_24"
         android:layout_marginBottom="@dimen/dp_8"
         android:text="@string/temperature_range"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintBottom_toTopOf="@+id/temp_range_4"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_temp_friday"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/text_date_4"
+        android:id="@+id/text_view_friday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_24"
@@ -227,17 +210,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/text_img_cuma"
+        android:id="@+id/image_view_rainy"
         android:layout_width="@dimen/dp_24"
         android:layout_height="@dimen/dp_24"
         android:src="@drawable/ic_rainy"
-        app:layout_constraintBottom_toBottomOf="@+id/text_date_4"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_friday"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_date_4" />
+        app:layout_constraintTop_toTopOf="@+id/text_view_friday" />
 
     <TextView
-        android:id="@+id/temp_range_4"
+        android:id="@+id/text_view_temp_friday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dp_24"
@@ -246,5 +229,6 @@
         android:textSize="@dimen/sp_14"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

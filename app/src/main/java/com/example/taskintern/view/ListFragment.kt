@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taskintern.adapter.Adapter
 import com.example.taskintern.databinding.FragmentListBinding
 import com.example.taskintern.model.Weather
-import com.example.taskintern.view.FragmentDetail.Companion.CITY_ID
-import com.example.taskintern.view.FragmentDetail.Companion.REQUEST_KEY
-import com.example.taskintern.view.FragmentDetail.Companion.UPDATED_WEATHER
+import com.example.taskintern.view.DetailFragment.Companion.CITY_ID
+import com.example.taskintern.view.DetailFragment.Companion.REQUEST_KEY
+import com.example.taskintern.view.DetailFragment.Companion.UPDATED_WEATHER
 
+class ListFragment : Fragment() {
 
-class FragmentList : Fragment() {
     private lateinit var weatherList: MutableList<Weather>
     private lateinit var binding: FragmentListBinding
 
@@ -24,15 +24,16 @@ class FragmentList : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentListBinding.inflate(inflater, container, false)
         weatherList = mutableListOf(
             Weather(0, "Ankara", "25°C", 10, 28, "Rüzgarlı"),
             Weather(1, "İzmir", "20°C", 12, 29, "Bulutlu"),
             Weather(2, "İstanbul", "19°C", 11, 23, "Güneşli")
         )
+
         binding.recyclerViewItem.layoutManager = LinearLayoutManager(requireContext())
         val adapter = Adapter(requireContext(), weatherList)
-
         adapter.onItemClickListener = { weather ->
             findNavController().navigate(FragmentListDirections.toDetail(weather))
         }
@@ -51,6 +52,4 @@ class FragmentList : Fragment() {
         }
         return binding.root
     }
-
 }
-

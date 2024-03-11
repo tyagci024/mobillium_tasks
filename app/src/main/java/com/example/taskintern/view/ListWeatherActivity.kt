@@ -10,6 +10,7 @@ import com.example.taskintern.model.Weather
 import com.example.taskintern.view.DetailActivitys.Companion.ARG_WEATHER_DATA
 
 class ListWeatherActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityListWeatherBinding
     private lateinit var weatherList: MutableList<Weather>
 
@@ -34,8 +35,4 @@ class ListWeatherActivity : AppCompatActivity() {
         }
         binding.recyclerViewItem.adapter = adapter
     }
-
 }
-
-
-
