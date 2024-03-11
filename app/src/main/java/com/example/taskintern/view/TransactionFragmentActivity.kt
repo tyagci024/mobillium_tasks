@@ -5,7 +5,8 @@ import android.os.Bundle
 import com.example.taskintern.R
 import com.example.taskintern.databinding.ActivityWonavCompBinding
 
-class ActivityForTransactionFragments : AppCompatActivity() {
+class TransactionFragmentActivity : AppCompatActivity() {
+
     private lateinit var  binding:ActivityWonavCompBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +14,7 @@ class ActivityForTransactionFragments : AppCompatActivity() {
         binding = ActivityWonavCompBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val firstFragment = FragmentFirstTransaction()
+        val firstFragment = FirstTransactionFragment()
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, firstFragment)
             .commit()
