@@ -23,6 +23,7 @@ class DetailFragment : Fragment() {
 
         binding = FragmentDetailBinding.inflate(inflater, container, false)
 
+        //scope function olarak let değil de with
         binding.apply {
             textViewCityName.text = currentWeather.cityName
             textViewWeatherCondition.text = currentWeather.weatherCondition
