@@ -9,27 +9,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taskintern.R
 import com.example.taskintern.adapter.Adapter
 import com.example.taskintern.databinding.FragmentWONavCompFirsBinding
+import com.example.taskintern.model.Data
 import com.example.taskintern.model.Weather
 
 class FirstTransactionFragment : Fragment() {
-
     private lateinit var binding: FragmentWONavCompFirsBinding
     private lateinit var adapter: Adapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
-
         binding = FragmentWONavCompFirsBinding.inflate(inflater, container, false)
 
-        val weatherList = listOf(
-            Weather(0, "Ankara", "25°C", 10, 28, "Rüzgarlı"),
-            Weather(1, "İzmir", "20°C", 12, 29, "Bulutlu"),
-            Weather(2, "İstanbul", "19°C", 11, 23, "Güneşli")
-        )
-
-        adapter = Adapter(requireContext(), weatherList)
+        adapter = Adapter(Data.weatherList)
         adapter.onItemClickListener = { weather ->
             val fragmentTransaction = parentFragmentManager.beginTransaction()
             fragmentTransaction.replace(

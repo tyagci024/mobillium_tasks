@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taskintern.databinding.ItemLayoutBinding
 import com.example.taskintern.model.Weather
 
-class Adapter(val context: Context, val weatherList: List<Weather>) :
+class Adapter(private val weatherList: List<Weather>) :
     RecyclerView.Adapter<Adapter.WeatherListViewHolder>() {
 
     var onItemClickListener: ((Weather) -> Unit)? = null

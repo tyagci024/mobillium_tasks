@@ -8,7 +8,6 @@ import com.example.taskintern.model.Weather
 import com.example.taskintern.extension.parcelable
 
 class DetailActivitys : AppCompatActivity() {
-
     private lateinit var binding: ActivityDetailActivitysBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,13 +23,13 @@ class DetailActivitys : AppCompatActivity() {
                 textViewWeatherCondition.text = data.weatherCondition
                 textViewWeather.text = data.weather
             }
-        } ?:run{
-            Toast.makeText(this, "Hata!!", Toast.LENGTH_SHORT).show()
+        } ?: run {
+            Toast.makeText(this, HATA, Toast.LENGTH_SHORT).show()
         }
-
     }
     companion object {
         const val ARG_WEATHER_DATA = "weatherData"
+        const val HATA = "Hata!!"
     }
 }
 

@@ -6,7 +6,6 @@ import com.example.taskintern.R
 import com.example.taskintern.databinding.ActivityWonavCompBinding
 
 class TransactionFragmentActivity : AppCompatActivity() {
-
     private lateinit var  binding:ActivityWonavCompBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

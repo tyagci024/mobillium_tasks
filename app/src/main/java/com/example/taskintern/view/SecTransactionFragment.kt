@@ -11,13 +11,13 @@ import com.example.taskintern.model.Weather
 import com.example.taskintern.extension.parcelable
 
 class SecTransactionFragment : Fragment() {
-
     private lateinit var binding: FragmentWONavCompSecBinding
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
         binding = FragmentWONavCompSecBinding.inflate(inflater, container, false)
         val weather: Weather? = arguments?.parcelable(WEATHER_DATA)
 
@@ -39,9 +39,7 @@ class SecTransactionFragment : Fragment() {
 
         fun newInstance(weather: Weather): SecTransactionFragment {
             val fragment = SecTransactionFragment()
-            val args = Bundle().apply {
-                putParcelable(WEATHER_DATA, weather)
-            }
+            val args = Bundle().apply{ putParcelable(WEATHER_DATA, weather)}
             fragment.arguments = args
             return fragment
         }

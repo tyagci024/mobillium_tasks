@@ -10,30 +10,24 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taskintern.adapter.Adapter
 import com.example.taskintern.databinding.FragmentListBinding
+import com.example.taskintern.model.Data
 import com.example.taskintern.model.Weather
 import com.example.taskintern.view.DetailFragment.Companion.CITY_ID
 import com.example.taskintern.view.DetailFragment.Companion.REQUEST_KEY
 import com.example.taskintern.view.DetailFragment.Companion.UPDATED_WEATHER
 
 class ListFragment : Fragment() {
-
-    private lateinit var weatherList: MutableList<Weather>
     private lateinit var binding: FragmentListBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
-
         binding = FragmentListBinding.inflate(inflater, container, false)
-        weatherList = mutableListOf(
-            Weather(0, "Aydın", "25°C", 10, 28, "Rüzgarlı"),
-            Weather(1, "İzmir", "20°C", 12, 29, "Bulutlu"),
-            Weather(2, "İstanbul", "19°C", 11, 23, "Güneşli")
-        )
 
         binding.recyclerViewItem.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = Adapter(requireContext(), weatherList)
+        val adapter = Adapter(Data.weatherList)
         adapter.onItemClickListener = { weather ->
             findNavController().navigate(FragmentListDirections.toDetail(weather))
         }
@@ -43,9 +37,9 @@ class ListFragment : Fragment() {
             val updatedWeather = bundle.getParcelable<Weather>(UPDATED_WEATHER)
             val cityId = bundle.getInt(CITY_ID)
             updatedWeather?.let {
-                val index = weatherList.indexOfFirst { weather -> weather.id == cityId }
+                val index = Data.weatherList.indexOfFirst { weather -> weather.id == cityId }
                 if (index != -1) {
-                    weatherList[index] = it
+                    Data.weatherList[index] = it
                     adapter.notifyItemChanged(index)
                 }
             }

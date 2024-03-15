@@ -10,20 +10,19 @@ import androidx.navigation.fragment.navArgs
 import com.example.taskintern.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
-
     private lateinit var binding: FragmentDetailBinding
     private val args by navArgs<FragmentDetailArgs>()
-    val currentWeather = args.currentWeather
+    private val currentWeather = args.currentWeather
     private var randomWeather: Int = 0
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
-
         binding = FragmentDetailBinding.inflate(inflater, container, false)
 
-        //scope function olarak let değil de with
+        // scope function olarak let değil de with
         binding.apply {
             textViewCityName.text = currentWeather.cityName
             textViewWeatherCondition.text = currentWeather.weatherCondition
@@ -37,8 +36,7 @@ class DetailFragment : Fragment() {
                 val updatedWeather = args.currentWeather.copy(weather = String.format("%d°C", randomWeather))
                 setFragmentResult(REQUEST_KEY, Bundle().apply {
                     putParcelable(UPDATED_WEATHER, updatedWeather)
-                    putInt(CITY_ID, args.currentWeather.id)
-                }) // FragmentResult bundle taşıyor
+                    putInt(CITY_ID, args.currentWeather.id)}) // FragmentResult bundle taşıyor
             }
         }
         return binding.root
